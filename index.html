@@ -31,8 +31,12 @@
         text-decoration: none;
       }
 
-      h1 {
-        display: none;
+      abbr {
+        border-bottom: 0;
+      }
+
+      [hidden] {
+        display: none !important;
       }
 
       ::-moz-selection {
@@ -107,9 +111,9 @@
   </head>
 
   <body>
-    <h1 aria-hidden="false">Tom Cunningham - UI Developer</h1>
+    <h1 hidden>Tom Cunningham - UI Developer</h1>
 
-    <div class="row" aria-hidden="true"><span class="red">#thomasthesecond</span> {</div>
+    <div class="row" aria-hidden="true"><abbr class="red" title="Tom Cunningham">#thomasthesecond</abbr> {</div>
     <div class="indent">
       <div class="row"><span class="yellow" id="about">about:</span> <span class="green" aria-labelledby="about">"UI Developer <a href="http://www.lonelyplanet.com">@LonelyPlanet</a>"</span>;</div>
       <div class="row"><span class="yellow" id="dribbble">dribbble:</span> <span class="blue">url</span>(<a class="orange" href="http://dribbble.com/thomasthesecond" aria-labelledby="dribbble">http://dribbble.com/thomasthesecond</a>);</div>
