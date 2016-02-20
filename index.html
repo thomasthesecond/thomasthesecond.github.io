@@ -1,65 +1,121 @@
 <!doctype html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Tom Cunningham / Web Designer + Developer</title>
+    <title>Tom Cunningham / UI Developer</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style type="text/css" media="screen">
-            body {
-                background-color: #222;
-                color: #ddd;
-                font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-                font-size: 80px;
-                margin: 0 20px;
-            }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 
-            h1 {
-                font-size: 120px;
-                line-height: 1;
-                margin: 0;
-                word-wrap: break-word;
-            }
+    <style type="text/css" media="screen">
+      body {
+        background-color: #1d1f21;
+        color: #c5c8c6;
+        font-family: "Inconsolata", monospace;
+        font-size: 20px;
+        line-height: 1.3;
+        margin: 20px;
+      }
 
-            p {
-                font-size: 50px;
-                line-height: 1;
-                margin: 15px 0 0;
-            }
+      a {
+        color: currentColor;
+        text-decoration: none;
+      }
 
-            a:link,
-            a:visited {
-                color: #289fc2;
-                text-decoration: none;
-                transition: color ease-in-out 250ms;
-            }
+      h1 {
+        display: none;
+      }
 
-            a:hover,
-            a:active {
-                color: #d24811;
-            }
-        </style>
-    </head>
+      ::-moz-selection {
+        background-color: rgba(55, 59, 66, .8);
+      }
 
-    <body>
-        <h1>thomasthesecond.com</h1>
+      ::selection {
+        background-color: rgba(55, 59, 66, .8);
+      }
 
-        <p>
-            <a href="http://dribbble.com/thomasthesecond">Dribbble</a> or
-            <a href="http://github.com/thomasthesecond">GitHub</a> or
-            <a href="http://twitter.com/thomasthesecond">Twitter</a> or
-            no care?
-        </p>
+      .row:hover {
+        background-color: #282a2e;
+      }
 
-        <script>
-            var _gaq=[['_setAccount','UA-5167203-1'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+      .indent {
+        border-left: 1px dotted #363839;
+        position: relative;
+      }
+
+      .indent::before,
+      .indent::after {
+        background-color: #1d1f21;
+        content: "";
+        display: block;
+        height: 5px;
+        left: -1px;
+        position: absolute;
+        width: 1px;
+      }
+
+      .indent::before {
+        top: 0;
+      }
+
+      .indent::after {
+        bottom: 0;
+      }
+
+      .indent > div::before {
+        content: "\00a0\00a0";
+      }
+
+      .gray {
+        color: #6f7171;
+      }
+
+      .yellow {
+        color: #f0c665;
+      }
+
+      .blue {
+        color: #81a2c1;
+      }
+
+      .green {
+        color: #a8bd58;
+      }
+
+      .red {
+        color: #cb675e;
+      }
+
+      .orange {
+        color: #de944d;
+      }
+
+      .seafoam {
+        color: #8abeb7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 aria-hidden="false">Tom Cunningham - UI Developer</h1>
+
+    <div class="row" aria-hidden="true"><span class="red">#thomasthesecond</span> {</div>
+    <div class="indent">
+      <div class="row" aria-hidden="true"><span class="yellow">content:</span> <span class="green">"UI Developer <a href="http://www.lonelyplanet.com">@LonelyPlanet</a>"</span>;</div>
+      <div class="row"><span class="yellow" id="dribbble">dribbble:</span> <span class="blue">url</span>(<a class="orange" href="http://dribbble.com/thomasthesecond" aria-labelledby="dribbble">http://dribbble.com/thomasthesecond</a>);</div>
+      <div class="row"><span class="yellow" id="github">github:</span> <span class="blue">url</span>(<a class="orange" href="http://github.com/thomasthesecond" aria-labelledby="github">http://github.com/thomasthesecond</a>);</div>
+      <div class="row"><span class="yellow" id="email">email:</span> <span class="orange" aria-labelledby="email">thomasthesecond@gmail.com</span>;</div>
+    </div>
+    <div class="row" aria-hidden="true">}</div>
+
+    <script>
+      var _gaq=[['_setAccount','UA-5167203-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
 </html>
